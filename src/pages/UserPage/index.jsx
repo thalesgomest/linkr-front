@@ -42,13 +42,16 @@ const UserPage = () => {
                                 article,
                                 link,
                                 urlMetadata,
+                                likes,
                             }) => (
                                 <Post
                                     key={id}
+                                    postId={id}
                                     username={username}
                                     userpic={userpic}
                                     userid={userId}
                                     article={article}
+                                    likes={likes}
                                     link={link}
                                     urlMetadata={urlMetadata}
                                 />

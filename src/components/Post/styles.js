@@ -23,6 +23,19 @@ export const PostSideContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+    > svg {
+        width: 34px;
+        height: 34px;
+    }
+    > p {
+        font-family: "Lato";
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 10px;
+        min-width: 60px;
+    }
 `;
 
 export const PostUserImage = styled.div`
@@ -31,6 +44,7 @@ export const PostUserImage = styled.div`
     border-radius: 26.5px;
     background-image: url(${({ src }) => src});
     background-size: cover;
+    margin-bottom: 15px;
     background-position: center;
     cursor: pointer;
     @media ${device.desktop} {

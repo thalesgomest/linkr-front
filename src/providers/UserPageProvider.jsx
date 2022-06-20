@@ -14,6 +14,7 @@ export const UserPageProvider = ({ children }) => {
         axios
             .get(`${process.env.REACT_APP_URI}/user/${userId}`)
             .then(({ data }) => {
+                console.log(data);
                 setUserPosts(data);
             })
             .catch(({ response }) => {

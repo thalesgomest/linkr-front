@@ -1,9 +1,22 @@
 import { useNavigate } from "react-router-dom";
 import ReactHashtag from "react-hashtag";
+import { AiOutlineHeart } from "react-icons/ai";
 
 import * as S from "./styles";
+import { useContext } from "react";
+import { PostContext } from "../../providers/PostProvider";
 
-const Post = ({ username, userpic, userid, article, link, urlMetadata }) => {
+const Post = ({
+    username,
+    postId,
+    userpic,
+    userid,
+    article,
+    link,
+    urlMetadata,
+    likes,
+}) => {
+    const { likeAndDislike } = useContext(PostContext);
     const navigate = useNavigate();
     // garbiel vai usar depois
     // window.scrollTo({
@@ -17,6 +30,12 @@ const Post = ({ username, userpic, userid, article, link, urlMetadata }) => {
                     src={userpic}
                     onClick={() => navigate(`/user/${userid}`)}
                 />
+                <AiOutlineHeart
+                    onClick={() => {
+                        likeAndDislike(postId);
+                    }}
+                />
+                <p>{`${likes} likes`}</p>
             </S.PostSideContainer>
             <S.PostContentContainer>
                 <S.PostUserName onClick={() => navigate(`/user/${userid}`)}>
