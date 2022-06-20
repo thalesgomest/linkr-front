@@ -5,6 +5,7 @@ import Timeline from "../pages/Timeline";
 import SignIn from "../pages/auth/SignIn";
 import SignUp from "../pages/auth/SignUp";
 import Hashtag from "../pages/Hashtag";
+import Timeline from "../pages/Timeline";
 import UserPage from "../pages/UserPage";
 
 export default function Router() {
@@ -12,7 +13,7 @@ export default function Router() {
         <BrowserRouter>
             <Routes>
                 <Route path="/timeline" element={<Timeline />} />
-                <Route path="/" element={<Navigate to='/sign-in' />} />
+                <Route path="/" element={<Navigate to="/sign-in" />} />
                 <Route path="/sign-in" element={<SignIn />} />
                 <Route path="/sign-up" element={<SignUp />} />
                 <Route path="/hashtag/:hashtag" element={<Hashtag />} />
