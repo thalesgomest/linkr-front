@@ -7,14 +7,6 @@ import Main from "./Main";
 import * as S from "./../styles";
 
 const SignIn = () => {
-    const navigate = useNavigate();
-    useEffect(() => {
-        if (isLogged()) {
-            setTimeout(() => {
-                navigate("/timeline");
-            }, 1000);
-        }
-    }, []);
     return (
         <S.AuthContainer>
             <Header />

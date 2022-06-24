@@ -10,13 +10,15 @@ export const CommentsProvider = ({ children }) => {
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState("");
     const [openComments, setOpenComments] = useState(false);
-    const authHeader = authorizationHeader(getUserData()?.token);
+    let authHeader;
 
     const toggleComments = () => {
+        authHeader = authorizationHeader(getUserData()?.token);
         setOpenComments(!openComments);
     };
 
     const addComment = (comment, postId) => {
+        authHeader = authorizationHeader(getUserData()?.token);
         axios
             .post(
                 `${process.env.REACT_APP_URI}/comments/${postId}`,

@@ -8,6 +8,7 @@ import Timeline from "../pages/Timeline";
 import UserPage from "../pages/UserPage";
 
 export default function Router() {
+    console.log("router");
     return (
         <BrowserRouter>
             <Routes>

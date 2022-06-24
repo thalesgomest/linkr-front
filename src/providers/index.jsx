@@ -11,6 +11,7 @@ import { CommentsProvider } from "./CommentsProvider";
 import { RepostProvider } from "./RepostProvider";
 
 export default function AppProvider({ children }) {
+    
     return (
         <LoadingProvider>
             <AuthProvider>
