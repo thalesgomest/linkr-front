@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactHashtag from "react-hashtag";
 
@@ -15,6 +15,7 @@ import { LikeContext } from "../../providers/LikeProvider";
 import { CommentsContext } from "../../providers/CommentsProvider";
 import { LoadingContext } from "../../providers/LoadingProvider";
 import { RepostContext } from "../../providers/RepostProvider";
+// import { FollowersContext } from "../../providers/FollowersProvider";
 
 import ScreenDelete from "../ScreendDelete";
 import Comments from "../Comments";
@@ -44,6 +45,7 @@ const Post = ({
     const { editPost } = useContext(PublishContext);
     const { newRepost } = useContext(RepostContext);
     const { update } = useContext(LoadingContext);
+    //const { getFollowers } = useContext(FollowersContext);
     const [deletePost, setDeletePost] = useState(false);
     const [editPostState, setEditPostState] = useState(false);
     const [openComments, setOpenComments] = useState(false);
@@ -57,6 +59,9 @@ const Post = ({
     );
 
     const currentUserId = userId;
+    useEffect(() => {
+        //getFollowers(userIdStorage);
+    }, []);
     return (
         <S.Wrapper isRepost={isRepost}>
             <span>
@@ -117,9 +122,9 @@ const Post = ({
                         {comments && (
                             <>
                                 <CommentsIcon
-                                    onClick={() =>
-                                        setOpenComments(!openComments)
-                                    }
+                                    onClick={() => {
+                                        setOpenComments(!openComments);
+                                    }}
                                 />
                                 <p>{`${comments.length} comments`}</p>
                             </>

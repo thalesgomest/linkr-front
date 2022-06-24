@@ -9,12 +9,10 @@ export const CommentsContext = createContext();
 export const CommentsProvider = ({ children }) => {
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState("");
-    const [openComments, setOpenComments] = useState(false);
+    //const [openComments, setOpenComments] = useState(false);
     const authHeader = authorizationHeader(getUserData()?.token);
 
-    const toggleComments = () => {
-        setOpenComments(!openComments);
-    };
+    const toggleComments = () => {};
 
     const addComment = (comment, postId) => {
         axios
@@ -37,8 +35,8 @@ export const CommentsProvider = ({ children }) => {
                 comments,
                 addComment,
                 toggleComments,
-                openComments,
-                setOpenComments,
+                // openComments,
+                // setOpenComments,
                 newComment,
                 setNewComment,
             }}
