@@ -20,7 +20,7 @@
 ## Table of contents
 * [Project Description](#project-description)
 * [Mockup](#mockup)
-* [Database Designer](#database-designer)
+* [Database Design](#database-design)
 * [Status](#status)
 * [Features](#features)
 * [How to run](#how-to-run)
@@ -35,7 +35,7 @@
 ![linker_desktop_mockup](https://user-images.githubusercontent.com/97575616/176689387-0955055e-87fc-447f-804e-9919036ca4a2.png)
 ![linkr_mobile](https://user-images.githubusercontent.com/97575616/176689432-f2b7c83f-a727-411f-8bd2-492e668168df.png)
 
-## Database Designer 
+## Database Design 
 
 ![image](https://user-images.githubusercontent.com/97575616/176697525-1be08b1a-ab51-4531-891e-28320e3320b8.png)
 
