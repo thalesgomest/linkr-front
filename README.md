@@ -53,10 +53,10 @@
 ## ⚙️ How to run
 
 ```bash
-# Clone this repo
+# Clone this front-end repository
 $ git clone https://github.com/thalesgomest/linkr-front.git
 
-# Clone the back-end repository and follow the instructions to run
+# Clone the back-end repository
 $ git clone https://github.com/thalesgomest/linkr-back.git
 
 # Change to project directory
